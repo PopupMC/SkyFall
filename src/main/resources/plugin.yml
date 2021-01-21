@@ -1,0 +1,7 @@
+name: SkyFall
+version: 1.0
+main: com.popupmc.skyfall.SkyFall
+description: Bridge between the worlds
+author: junebug12851
+api-version: 1.15
+depend: []
