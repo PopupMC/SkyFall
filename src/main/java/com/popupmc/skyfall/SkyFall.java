@@ -10,6 +10,7 @@ public class SkyFall extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new OnEntityDamageEvent(), this);
         Bukkit.getPluginManager().registerEvents(new OnPlayerMoveEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new OnBlockDamageEvent(), this);
 
         getLogger().info("SkyFall is enabled.");
     }
