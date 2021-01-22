@@ -1,9 +1,6 @@
 package com.popupmc.skyfall;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -147,9 +144,21 @@ public class DoTeleport {
     }
 
     public static void doTeleport(Entity e, Location loc) {
+
+        // Clone velocity
         Vector vec = e.getVelocity().clone();
-        e.teleport(loc);
-        e.setVelocity(vec);
+
+        // Get new world
+        World world = loc.getWorld();
+
+        // Load chunk async
+        world.getChunkAtAsync(loc).thenRun(() -> {
+            // Teleport player to newly loaded chunk
+            e.teleport(loc);
+
+            // Re-give correct velocity
+            e.setVelocity(vec);
+        });
     }
 
     // Code readability

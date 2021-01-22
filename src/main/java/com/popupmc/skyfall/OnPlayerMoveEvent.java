@@ -14,6 +14,8 @@ public class OnPlayerMoveEvent implements Listener {
         if((skipCounter % 5) != 0)
             return;
 
+        skipCounter = 0;
+
         // Do a hasty rough check
         // Basically nobody needs teleporting anywhere if not within these coordinates
         // Another little optimization to help the server out
