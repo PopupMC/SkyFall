@@ -33,6 +33,7 @@ public class OnBlockDamageEvent implements Listener {
         if(mainHand != Material.WOODEN_AXE &&
                 mainHand != Material.STONE_AXE &&
                 mainHand != Material.IRON_AXE &&
+                mainHand != Material.GOLDEN_AXE &&
                 mainHand != Material.DIAMOND_AXE)
             return;
 
