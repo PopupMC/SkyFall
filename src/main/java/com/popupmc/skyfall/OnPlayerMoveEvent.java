@@ -21,12 +21,12 @@ public class OnPlayerMoveEvent implements Listener {
         // Another little optimization to help the server out
         Location loc = e.getPlayer().getLocation();
 
-        if(loc.getBlockY() < DoTeleport.netherCeiling &&
+        if(loc.getBlockY() < BridgeManager.netherCeiling &&
             loc.getBlockY() > 0)
             return;
 
         // Now try to teleport the person
-        DoTeleport.doTeleport(e.getPlayer());
+        SkyFall.bridgeManager.attemptTeleport(e.getPlayer());
     }
 
     public static int skipCounter = 0;

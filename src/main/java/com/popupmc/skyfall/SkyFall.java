@@ -8,6 +8,10 @@ public class SkyFall extends JavaPlugin {
     public void onEnable() {
         plugin = this;
 
+        // Setup world bridges
+        bridgeManager = new BridgeManager();
+
+        // Setup events
         Bukkit.getPluginManager().registerEvents(new OnEntityDamageEvent(), this);
         Bukkit.getPluginManager().registerEvents(new OnPlayerMoveEvent(), this);
         Bukkit.getPluginManager().registerEvents(new OnBlockDamageEvent(), this);
@@ -21,6 +25,8 @@ public class SkyFall extends JavaPlugin {
     }
 
     static JavaPlugin plugin;
+
+    public static BridgeManager bridgeManager;
 
     public static final String mainWorldName = "main";
     public static final String endWorldName = "main_the_end";

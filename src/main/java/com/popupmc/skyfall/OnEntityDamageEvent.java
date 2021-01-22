@@ -16,7 +16,7 @@ public class OnEntityDamageEvent implements Listener {
             return;
 
         // Do a teleport between worlds and cancel damage if successful (Right conditions)
-        if(DoTeleport.doTeleport(e.getEntity()))
+        if(SkyFall.bridgeManager.attemptTeleport(e.getEntity()))
             e.setCancelled(true);
     }
 }
