@@ -246,6 +246,40 @@ public class BreathableBlocks {
                 material == Material.LECTERN ||
                 material == Material.STONECUTTER ||
                 material == Material.BELL ||
-                material == Material.LANTERN;
+                material == Material.LANTERN ||
+                material == Material.CHAIN ||
+                material == Material.CRIMSON_ROOTS ||
+                material == Material.WARPED_ROOTS ||
+                material == Material.NETHER_SPROUTS ||
+                material == Material.SOUL_CAMPFIRE ||
+                material == Material.SOUL_FIRE ||
+                material == Material.SOUL_LANTERN ||
+                material == Material.SOUL_TORCH ||
+                material == Material.SOUL_WALL_TORCH ||
+                material == Material.TWISTING_VINES ||
+                material == Material.TWISTING_VINES_PLANT ||
+                material == Material.WEEPING_VINES ||
+                material == Material.WEEPING_VINES_PLANT ||
+                material == Material.CRIMSON_FUNGUS ||
+                material == Material.CRIMSON_SLAB ||
+                material == Material.CRIMSON_PRESSURE_PLATE ||
+                material == Material.CRIMSON_FENCE ||
+                material == Material.CRIMSON_TRAPDOOR ||
+                material == Material.CRIMSON_FENCE_GATE ||
+                material == Material.CRIMSON_STAIRS ||
+                material == Material.CRIMSON_BUTTON ||
+                material == Material.CRIMSON_DOOR ||
+                material == Material.CRIMSON_SIGN ||
+                material == Material.POTTED_WARPED_ROOTS ||
+                material == Material.WARPED_FUNGUS ||
+                material == Material.WARPED_SLAB ||
+                material == Material.WARPED_PRESSURE_PLATE ||
+                material == Material.WARPED_FENCE ||
+                material == Material.WARPED_TRAPDOOR ||
+                material == Material.WARPED_FENCE_GATE ||
+                material == Material.WARPED_STAIRS ||
+                material == Material.WARPED_BUTTON ||
+                material == Material.WARPED_DOOR ||
+                material == Material.WARPED_SIGN;
     }
 }

@@ -25,10 +25,5 @@ public class SkyFall extends JavaPlugin {
     }
 
     static JavaPlugin plugin;
-
     public static BridgeManager bridgeManager;
-
-    public static final String mainWorldName = "main";
-    public static final String endWorldName = "main_the_end";
-    public static final String netherWorldName = "main_nether";
 }

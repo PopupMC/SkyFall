@@ -153,7 +153,9 @@ public class Bridge {
 
     public boolean attemptTeleport(Entity e) {
 
-        if(!checkYCoords(e) || !checkWorld(e))
+        boolean validBridge = checkYCoords(e) && checkWorld(e);
+
+        if(!validBridge)
             return false;
 
         // Clone velocity so we can preserve the speed
@@ -174,10 +176,14 @@ public class Bridge {
             ensureEntranceHole(e);
 
             // Teleport entity to newly loaded chunk
+            // Don't do asyncTeleport. It sounds nice and helpful but it causes pretty weird bugs
             e.teleport(loc);
 
             // Re-give correct velocity
             e.setVelocity(vec);
+
+            // Countdown timed immunity
+            BridgeManager.grantTimedImmunity(e.getUniqueId());
         });
 
         return true;
