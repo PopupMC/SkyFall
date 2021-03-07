@@ -54,6 +54,48 @@ public class BridgeManager {
                         mainCeiling,
                         Material.STONE,
                         true));
+
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        // Nether Ceiling => Main Floor
+        bridges.add(
+                new Bridge(
+                        Objects.requireNonNull(Bukkit.getWorld("insanity_nether")),
+                        Objects.requireNonNull(Bukkit.getWorld("insanity")),
+                        netherCeiling,
+                        mainFloor,
+                        Material.STONE,
+                        false));
+
+        // Main Floor => Nether Ceiling
+        bridges.add(
+                new Bridge(
+                        Objects.requireNonNull(Bukkit.getWorld("insanity")),
+                        Objects.requireNonNull(Bukkit.getWorld("insanity_nether")),
+                        mainFloor,
+                        netherCeiling,
+                        Material.NETHERRACK,
+                        true));
+
+        // Main Ceiling => End Floor
+        bridges.add(
+                new Bridge(
+                        Objects.requireNonNull(Bukkit.getWorld("insanity")),
+                        Objects.requireNonNull(Bukkit.getWorld("insanity_the_end")),
+                        mainCeiling,
+                        endFloor,
+                        Material.END_STONE,
+                        false));
+
+        // End Floor => Main Ceiling
+        bridges.add(
+                new Bridge(
+                        Objects.requireNonNull(Bukkit.getWorld("insanity_the_end")),
+                        Objects.requireNonNull(Bukkit.getWorld("insanity")),
+                        endFloor,
+                        mainCeiling,
+                        Material.STONE,
+                        true));
     }
 
     // Attempt to teleport player
